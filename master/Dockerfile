@@ -27,6 +27,6 @@ RUN conda install --yes \
     jupyterlab==0.35.4 \
     && conda clean -tipsy
 
-EXPOSE 8080 7077 6066
+EXPOSE 8080 7077 6066 8888
 
 CMD ["/bin/bash", "/master.sh"]
