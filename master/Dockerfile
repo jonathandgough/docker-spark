@@ -62,6 +62,7 @@ RUN conda install --yes \
     pandas==0.24.2 \
     ipywidgets \
     jupyter \
+    pyspark \
     && conda clean -tipsy
 COPY master.sh /
 
