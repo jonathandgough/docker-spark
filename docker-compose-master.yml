@@ -1,7 +1,7 @@
 version: '2'
 services:
   spark-master:
-    image: bde2020/spark-master:2.4.0-hadoop2.7
+    image: spark-master-etg:latest
     container_name: spark-master
     ports:
       - "8080:8080"
