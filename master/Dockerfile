@@ -11,6 +11,10 @@ COPY wait-for-step.sh /
 COPY execute-step.sh /
 COPY finish-step.sh /
 
+RUN apk update \
+    && apk add ca-certificates \
+    && update-ca-certificates /
+
 RUN apk add --no-cache curl bash openjdk8-jre \
       && chmod +x *.sh \
       && wget https://archive.apache.org/dist/spark/spark-2.4.0/spark-2.4.0-bin-hadoop2.7.tgz \
