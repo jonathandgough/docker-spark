@@ -67,8 +67,10 @@ RUN conda install --yes \
     ipywidgets \
     jupyter \
     pyspark \
-    -c conda-forge featuretools \
     && conda clean -tipsy
+
+RUN conda install -c conda-forge featuretools
+
 COPY master.sh /
 
 ENV SPARK_MASTER_PORT 7077
