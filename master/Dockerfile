@@ -63,6 +63,7 @@ RUN conda install --yes \
     ipywidgets \
     jupyter \
     pyspark \
+    -c conda-forge featuretools \
     && conda clean -tipsy
 COPY master.sh /
 
