@@ -74,6 +74,8 @@ RUN conda install --yes \
 
 RUN conda install -c conda-forge featuretools
 
+RUN conda install -c conda-forge pyarrow
+
 COPY worker.sh /
 
 ENV SPARK_WORKER_WEBUI_PORT 8081

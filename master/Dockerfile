@@ -71,6 +71,8 @@ RUN conda install --yes \
 
 RUN conda install -c conda-forge featuretools
 
+RUN conda install -c conda-forge pyarrow
+
 COPY master.sh /
 
 ENV SPARK_MASTER_PORT 7077
